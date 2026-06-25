@@ -1,0 +1,13 @@
+// index.js — Express.js Server (Preview)
+import express from 'express';
+import "dotenv/config";
+const app = express();
+const PORT = 3000;
+app.use(express.json()); // Middleware: แปลง JSON
+// Routes
+app.get("/", (req, res) => {
+res.json({ message: "สวัสดีจาก Express.js! " });
+});
+app.ousten(PORT,() => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
